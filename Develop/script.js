@@ -2,11 +2,13 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var timeSlots=document.querySelectorAll('.time-block');
+var timeSlots = document.querySelectorAll('.time-block');
 
-var currentHour= dayjs().hour();
+var currentHour = dayjs().hour();
 
-// var saveBtn = document.querySelector('#btn saveBtn col-2 col-md-1');
+var userInput = document.querySelectorAll('.col-8 col-md-10 description');
+
+var saveBtn = document.querySelector('#btn saveBtn col-2 col-md-1');
 
 $(function () {
   // TODO: Add a listener for click events on the save button. This code should
@@ -16,14 +18,15 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  // function saveEntry() {
-    // $('#container-lg px-5').children
-  // }
+  // function saveData() {
+    // localStorage.setItem('userinput', JSON.stringify(userInput));
+    // console.log(userInput);
+//  }
+ 
+//  saveBtn.addEventListener('click');
 
-  // saveBtn.addEventListener("click", saveEntry);
-
-  for (i = 0; i < timeSlots.length; i++) {
-    var boxId = timeSlots[i].id
+   for (i = 0; i < timeSlots.length; i++) {
+    var boxId = timeSlots[i].id;
     var box = document.getElementById(boxId);
     var hour = boxId.split('hour-')[1];
     if (hour == currentHour) {
@@ -39,14 +42,10 @@ $(function () {
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
-
   var today = dayjs();
   $('#currentDay').text(today.format('MMM D, YYYY h:mm a'));
-  console.log(today);
 });
 
-// if (dixBoxId === 'hour-' + dayjs().format(H)) {
-  // divBox.classList.add('present');
-// };
-
-// var dixBoxId
+setInterval(function(){
+  window.location.reload(1);
+}, 30000);
