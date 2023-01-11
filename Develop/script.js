@@ -8,9 +8,15 @@ var currentHour = dayjs().hour();
 
 var userInput = document.querySelectorAll('.col-8 col-md-10 description');
 
-var saveBtn = document.querySelector('#btn saveBtn col-2 col-md-1');
+var saveBtn = document.querySelectorAll('.fas fa-save');
 
-$(function () {
+$(".saveBtn").click(function(){
+  var text = $(this).siblings(".description").val();
+  var time = $(this).parent().attr("id");
+  localStorage.setItem(time, text);
+})
+
+function updateColor () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
   // local storage. HINT: What does `this` reference in the click listener
@@ -18,23 +24,14 @@ $(function () {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-  // function saveData() {
-    // localStorage.setItem('userinput', JSON.stringify(userInput));
-    // console.log(userInput);
-//  }
- 
-//  saveBtn.addEventListener('click');
-
    for (i = 0; i < timeSlots.length; i++) {
-    var boxId = timeSlots[i].id;
-    var box = document.getElementById(boxId);
-    var hour = boxId.split('hour-')[1];
+    var hour = parseInt(timeSlots[i].id);
     if (hour == currentHour) {
-      box.classList.add('present');
+      $(`#${hour}`).addClass('present');
     } else if (hour < currentHour) {
-      box.classList.add('past');
+      $(`#${hour}`).addClass('past');
     } else if (hour > currentHour) {
-      box.classList.add('future');
+      $(`#${hour}`).addClass('future');
     }
   }
 
@@ -44,8 +41,11 @@ $(function () {
 
   var today = dayjs();
   $('#currentDay').text(today.format('MMM D, YYYY h:mm a'));
-});
+};
 
-setInterval(function(){
-  window.location.reload(1);
-}, 30000);
+updateColor();
+
+setInterval(updateColor, 30000);
+
+
+localStorage.getItem(time, text);
