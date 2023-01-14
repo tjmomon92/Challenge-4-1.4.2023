@@ -10,16 +10,27 @@ This application operates entirely in your browser; no installation required for
 
 ## Usage
 
-Once the Work Day Scheduler has been opened in your browser, to save task data to a specific timeslot, simply locate the desired timeslot, enter your task, and hit the save button on the right-hand side of the screen.
+In this application, the use of Grey, Red, and Green has been used to denote past time slots, the current timeslot, respectively:
 
+![ColorDemo](images/Screenshot-ColorDemo.png)
 
-<!-- Provide instructions and examples for use. Include screenshots as needed. -->
+Once the Work Day Scheduler has been opened in your browser, to save task data to a specific timeslot, simply locate the desired timeslot, enter your task, and hit the save button on the right-hand side of the screen. This will save your inputted task to Local Storage.
 
-<!-- To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax: -->
+![Userinput](images/Screenshot-UserInput.png)
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+To verify that your desired input has been successfully saved, open this application in Google Chrome, right-click on the page, and select "Inspect".
+
+![VerifyStep1](images/Screenshot-VerifySavedInputStep#1.png)
+
+This will open your Google Chrome Dev Tools. Once opened, click on the ">>" dropdown menu, and select "Applications".
+
+![VerifyStep2](images/Screenshot-VerifySavedInputStep#2.png)
+
+On the left-side of your dev tools, make sure that the "file:///" option is selected under the "Local Storage" down that is directly under the "Storage" section. Your user input will appear on the right-side of your dev tools, giving your inputted "Value" a unique identifier or "Key". 
+
+![VerifyStep3](images/Screenshot-VerifySavedInputStep#2.png)
+
+If your refresh the page or navigate back to this page, your task data will still be available upon page load. To replace an entry, simply re-save a new input in your desired timeslot. To delete all curent entries, navigate back to your Local Storage as stated above, and hit the prohibition emblem that apears above your "Key" and "Value" sections (This is the circle with the slash through it!).
 
 ## Credits
 

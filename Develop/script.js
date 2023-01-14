@@ -1,8 +1,6 @@
   // selects all time slots in HTML
   var timeSlots = document.querySelectorAll('.time-block');
 
-  var user = document.querySelectorAll('.description');
-
   // sets variable to select the hour from the live clock for comparison in the updateColor function
   var currentHour = dayjs().hour();
 
