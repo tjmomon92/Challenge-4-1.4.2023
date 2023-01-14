@@ -3,9 +3,7 @@
 ## Description
 
 This project was based around creating script for an easy-to-read, color-coded work day scheduler focused on ease-of-use and functionality. This application functions through the use of local storage to record and save time-sensitive items such as meetings, tasks, and appointments that can be easily reviewed by an employee. Another note-worthy function is the use of color to easily show past, current, and future items for easy and fast review. My goal is for this project to ease the burden of keeping oneself organized in a fast-paced work environment that demands quick turn-around on deadlines. The use of local storage in this application enables an employee to make quick additions to their workday without the fear of losing important task information upon a window refresh. This project was an excellent learning experience, as I not only got practice in using JavaScript, but also got to experiment and play with the versatility of jQuery. I have learned a lot about the different ways that a developer can utilize local storage to meet different requirements, as well as new jQuery syntax to keep my code clean and organized. 
-  Check it out here!
-  [
-](https://tjmomon92.github.io/Challenge-5-1.4.2023/)
+  [Check it out here!](https://tjmomon92.github.io/Challenge-5-1.4.2023/)
   
 ## Installation
 
